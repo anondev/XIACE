@@ -1,0 +1,30 @@
+RCM - リモートコマンドマネージャ for FFXI (Remote Command Manager for FFXI)
+XIACE - メモリアクセスライブラリ for FFXI (Memory Access Provider for FFXI)
+XITEST - テストプログラム for XIACE (TEST Utility for XIACE)
+
+RCM and XITEST are distributed under GPLv2 lincese.
+XIACE is distributed under GPLv2 lincese.
+
+Please read the COPYING and COPYING.LGPL file for more detail.
+This softwares come with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+
+
+RCM はFFXIでのアカウント間リモートコマンドを実行するツールです.
+サンプル的プログラムなので詳しい説明は省きます.
+TCP/IPもしくはプロセス間でコマンドの実行を橋渡しできます.
+Windowerのinit.txtで keyboard_allowmmf 1 を設定するのを忘れないでください.
+
+RCM はGPLv2で配布していますので、改造品の配布、または再配布を行う場合は遵守してください.
+詳しくはCOPYINGを参照してください.
+
+XIACE は FFXIへメモリアクセスを行い、各種データの取得を行うライブラリです.
+XIACE は LGPLv2で配布していますので、改造品の配布、または再配布を行う場合は遵守してください.
+(XIACEを使用している旨、FFXI RCM Project の著作権表記をプログラム実行中に表示する手段が必要です)
+詳しくはCOPYING.LGPLを参照してください.
+
+これらのソフトウェアの使用により起こるいかなる事象においても、
+FFXI RCM Projectは何ら責任を負うことはありません。
+
+
+Copyright (C) 2009 FFXI RCM Proeject <ff11rcm@gmail.com>
+All Rights Reserved.
