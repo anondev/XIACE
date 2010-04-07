@@ -14,6 +14,7 @@ namespace FFXI.XIACE.util {
         private PolProcessWatcher ppw;
         private Queue<Process> qadd;
         private Queue<Process> qdel;
+        private string TextOriginal;
 
         protected XIWindower Windower {
             get { return _windower; }
@@ -22,12 +23,14 @@ namespace FFXI.XIACE.util {
         public WindowerForm() {
             InitializeComponent();
             InitProcessHandler();
+            WindowerInstanceChanged += new EventHandler(WindowerForm_WindowerInstanceChanged);
         }
 
         private void WindowerForm_Load(object sender, EventArgs e) {
             WindowerMenuItemTopMost.Checked = TopMost;
             ProcessWatchTimer_Tick(null, null);
             ProcessWatchTimer.Start();
+            TextOriginal = Text;
         }
 
         private void InitProcessHandler() {
@@ -102,6 +105,16 @@ namespace FFXI.XIACE.util {
             _windower = new XIWindower(pol.Pid);
 
             WindowerInstanceChanged.Invoke(this, new EventArgs());
+        }
+
+        private void WindowerForm_TextChanged(object sender, EventArgs e) {
+            TextOriginal = Text;
+        }
+
+        private void WindowerForm_WindowerInstanceChanged(object sender, EventArgs e) {
+            string tmp = TextOriginal;
+            Text = (_windower == null) ? TextOriginal : string.Format("{0} [ {1} ]", TextOriginal, _windower.pol.Title);
+            TextOriginal = tmp;
         }
     }
 }
