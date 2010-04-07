@@ -116,5 +116,22 @@ namespace FFXI.XIACE.util {
             Text = (_windower == null) ? TextOriginal : string.Format("{0} [ {1} ]", TextOriginal, _windower.pol.Title);
             TextOriginal = tmp;
         }
+
+        private void WindowerMenuItemAbout_Click(object sender, EventArgs e) {
+            MessageBox.Show(this, GetAboutString(), "Copyright");
+        }
+
+        protected virtual string GetAboutString() {
+            return @"
+このプログラムは、
+
+  XIACE ( http://ff11rcm.googlecode.com/ )
+
+を使用しています。
+
+
+XIACE Copyright (C) 2009 FFXI RCM Project. 
+";
+        }
     }
 }

@@ -28,6 +28,7 @@
             this.MainContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.WindowerMenuItemTopMost = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowerMenuItemProcess = new System.Windows.Forms.ToolStripMenuItem();
+            this.WindowerMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,24 +40,32 @@
             // 
             this.MainContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.WindowerMenuItemTopMost,
-            this.WindowerMenuItemProcess});
+            this.WindowerMenuItemProcess,
+            this.WindowerMenuItemAbout});
             this.MainContextMenu.Name = "ProcessContextMenu";
-            this.MainContextMenu.Size = new System.Drawing.Size(119, 48);
+            this.MainContextMenu.Size = new System.Drawing.Size(153, 92);
             // 
             // WindowerMenuItemTopMost
             // 
             this.WindowerMenuItemTopMost.CheckOnClick = true;
             this.WindowerMenuItemTopMost.Name = "WindowerMenuItemTopMost";
-            this.WindowerMenuItemTopMost.Size = new System.Drawing.Size(118, 22);
+            this.WindowerMenuItemTopMost.Size = new System.Drawing.Size(152, 22);
             this.WindowerMenuItemTopMost.Text = "最前面";
             this.WindowerMenuItemTopMost.Click += new System.EventHandler(this.WindowerMenuItemTopMost_DropDownItemTopMost_Click);
             // 
             // WindowerMenuItemProcess
             // 
             this.WindowerMenuItemProcess.Name = "WindowerMenuItemProcess";
-            this.WindowerMenuItemProcess.Size = new System.Drawing.Size(118, 22);
+            this.WindowerMenuItemProcess.Size = new System.Drawing.Size(152, 22);
             this.WindowerMenuItemProcess.Text = "Windower";
             this.WindowerMenuItemProcess.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.WindowerMenuItemProcess_DropDownItemClicked);
+            // 
+            // WindowerMenuItemAbout
+            // 
+            this.WindowerMenuItemAbout.Name = "WindowerMenuItemAbout";
+            this.WindowerMenuItemAbout.Size = new System.Drawing.Size(152, 22);
+            this.WindowerMenuItemAbout.Text = "About";
+            this.WindowerMenuItemAbout.Click += new System.EventHandler(this.WindowerMenuItemAbout_Click);
             // 
             // WindowerForm
             // 
@@ -79,5 +88,6 @@
         protected System.Windows.Forms.ContextMenuStrip MainContextMenu;
         private System.Windows.Forms.ToolStripMenuItem WindowerMenuItemProcess;
         private System.Windows.Forms.ToolStripMenuItem WindowerMenuItemTopMost;
+        private System.Windows.Forms.ToolStripMenuItem WindowerMenuItemAbout;
     }
 }
